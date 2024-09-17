@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh; 
+    background-color: #297e69;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.stopwatch {
+    background-color: #76a42d;
+    backdrop-filter: blur(90px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #261f114d;
+    text-align: center;
+}
+#display {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: white;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    padding: 10px;
+    background-color: #6e3362;
+    font-size: 20px;
+    margin: 0 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 120px;
+}
+.lapRecords {
+    position: -webkit-sticky;
+    width: 100%;
+    max-width: 200px;
+    background-color: #8CABFF;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-left: 20px;
+    max-height: 200px; 
+    overflow-y: auto; 
+    margin-left: 50px;
+}
+    
+h5 {
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+#laps {
+    padding: 5px;
+}
+#laps li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+.footer {
+    margin-top: auto;
+    color: white;
+    text-align: center;
+}
+
+.social-icon {
+    background: white;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        position: absolute;
+    }
+    #display {
+        font-size: 60px;
+    }
+    button {
+        font-size: 18px;
+        max-width: 100px;
+        margin: 5px 0;
+        padding: 10px;
+    }
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .lapRecords {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
